@@ -32,9 +32,4 @@ public class Student {
     @Column(nullable = false, unique = true)
     private String password;
 
-    @Column
-    private LocalDateTime createAt;
-
-    @Column
-    private LocalDateTime updatedAt;
 }
