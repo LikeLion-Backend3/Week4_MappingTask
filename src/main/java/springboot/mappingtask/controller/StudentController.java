@@ -40,6 +40,6 @@ public class StudentController {
     public ResponseEntity<String> deleteStudent (String nickname) throws Exception {
         studentService.deleteStudent(nickname);
 
-        return ResponseEntity.status(HttpStatus.OK).body("정상적으로 삭제되었습니다.");
+        return ResponseEntity.status(HttpStatus.OK).body(nickname+"학생이 삭제되었습니다. 삭제되었습니다.");
     }
 }
