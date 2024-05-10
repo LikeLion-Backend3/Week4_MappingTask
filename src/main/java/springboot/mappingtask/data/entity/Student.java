@@ -31,4 +31,7 @@ public class Student {
     @Column(nullable = false, unique = true)
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
 }
