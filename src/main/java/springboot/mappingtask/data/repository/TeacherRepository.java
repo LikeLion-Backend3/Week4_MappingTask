@@ -7,5 +7,5 @@ import java.util.Optional;
 
 //상속
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
-    Optional<Teacher> findByTeacherName(String name);
+    Optional<Teacher> findByName(String name);
 }

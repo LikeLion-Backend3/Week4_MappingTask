@@ -7,16 +7,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ChangeTeacherNameRequestDto {
 
-    private Long pid;
     private String name;
-
-    public Long getPid() {
-        return pid;
-    }
-
-    public void setPid(Long pid) {
-        this.pid = pid;
-    }
+    private Long pid;
 
     public String getName() {
         return name;
@@ -26,11 +18,22 @@ public class ChangeTeacherNameRequestDto {
         this.name = name;
     }
 
+    public Long getPid() {
+        return pid;
+    }
+
+    public void setPid(Long pid) {
+        this.pid = pid;
+    }
+
     @Override
     public String toString() {
         return "ChangeTeacherNameRequestDto{" +
-                "pid=" + pid +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", pid=" + pid +
                 '}';
     }
+
+
+
 }

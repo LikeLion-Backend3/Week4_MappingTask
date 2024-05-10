@@ -28,7 +28,7 @@ public class TeacherDAOImpl implements TeacherDAO{
 
     @Override
     public Teacher selectTeacher(String name) throws Exception {
-        Optional<Teacher> teacher = teacherRepository.findByTeacherName(name);
+        Optional<Teacher> teacher = teacherRepository.findByName(name);
 
         if(teacher.isPresent()) {
             Teacher result = teacher.get();
@@ -40,7 +40,7 @@ public class TeacherDAOImpl implements TeacherDAO{
 
     @Override
     public Teacher updateTeacherName(Long pid, String name) throws Exception {
-        Optional<Teacher> findTeacher = teacherRepository.findByTeacherName(name);
+        Optional<Teacher> findTeacher = teacherRepository.findByName(name);
 
         Teacher result;
 
@@ -59,7 +59,6 @@ public class TeacherDAOImpl implements TeacherDAO{
 
     @Override
     public void deleteTeacher(Long pid) throws Exception {
-
         teacherRepository.deleteById(pid);
     }
 }
