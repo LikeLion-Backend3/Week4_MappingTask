@@ -38,4 +38,12 @@ public class Teacher {
     @Column(nullable = false)
     private Integer grade; //맡은 학년
 
+    @OneToOne(mappedBy = "teacher")
+    @ToString.Exclude
+    private TeacherDetail teacherDetail;
+
+    @ManyToOne //다대일 매핑
+    @JoinColumn(name = "student_id")
+    @ToString.Exclude
+    private Student student;
 }
