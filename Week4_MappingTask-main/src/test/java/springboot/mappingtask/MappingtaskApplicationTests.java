@@ -4,9 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import springboot.mappingtask.data.entity.Student;
-import springboot.mappingtask.data.entity.Student_a;
+import springboot.mappingtask.data.entity.Books;
 import springboot.mappingtask.data.repository.StudentRepository;
-import springboot.mappingtask.data.repository.Student_aRepository;
 
 import java.util.List;
 
@@ -40,7 +39,7 @@ class MappingtaskApplicationTests {
         studentRepository.save(studentA);
         studentRepository.save(studentB);
 
-        Student_a class1 = new Student_a();
+        Books class1 = new Books();
         class1.setGroupName("1반");
         class1.getMembers().add(studentA);
         class1.getMembers().add(studentB);
