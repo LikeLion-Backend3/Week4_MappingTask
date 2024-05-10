@@ -36,6 +36,6 @@ public class Teacher {
     private String subject; //과목
 
     @Column(nullable = false)
-    private Integer grade; //맡은 과목
+    private Integer grade; //맡은 학년
 
 }
